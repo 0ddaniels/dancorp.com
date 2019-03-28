@@ -6,3 +6,13 @@ header{
 .title{
     text-align: center;
 }
+p{
+    font-weight: 600;
+    text-align: justify;
+}
+
+.price{
+    font-size: 24px;
+    display: block;
+    margin: 0 auto;
+}
