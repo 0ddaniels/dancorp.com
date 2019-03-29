@@ -16,3 +16,15 @@ p{
     display: block;
     margin: 0 auto;
 }
+
+#cart{
+    padding: 16px;
+    width: 600px;
+    margin: 0 auto;
+    border: 2px solid blue;
+}
+
+#result{
+    font-weight: 500;
+}
+

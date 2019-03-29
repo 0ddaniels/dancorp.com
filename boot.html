@@ -14,7 +14,7 @@
       <h1 class = "title">Dancorp</h1>
     </header>
     <section class = "container">
-      <form action="boot.html" method="GET" class="row">
+      <div class="row">
         <div class = "col">
           <h3 class = "title">Silver Package</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, harum ipsa! Et sunt aliquam accusantium labore explicabo, rerum eligendi repudiandae molestiae doloribus assumenda expedita tempore totam at excepturi veniam quae.</p>
@@ -30,15 +30,27 @@
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, harum ipsa! Et sunt aliquam accusantium labore explicabo, rerum eligendi repudiandae molestiae doloribus assumenda expedita tempore totam at excepturi veniam quae.</p>
           <a class="price title" href="" {text-decoration:none;}>$4,449.99</a>
         </div>
-        <div id="cart" class="row">
-          <select name="options" id="optons">
-            <option value="129.99">Buy Silver Package</option>
-            <option value="129.99">Buy Gold Package</option>
-            <option value="129.99">Buy Platnum Package</option>
+      </div>
+        <form id="cart" method= "GET" action="boot.html" oninput="calculate()">
+          Options:<select name="option" id="option">
+            <option value="129.99">Silver Package</option>
+            <option value="999.99">Gold Package</option>
+            <option value="4449.99">Platnum Package</option>
           </select>
-        </div>
-      </form>      
+          Months:<input id="time" type="number" value="12" min="0">
+          Price:<output id="result" name="out" for="option time"></output>
+        </form>    
     </section>
+
+    <script>
+      function calculate(){
+        let doc = document;
+        let option = doc.getElementById("option");
+        let time = doc.getElementById("time");
+        let result = doc.getElementById("result");
+        result.value = "$" + parseInt(option.value) * parseInt(time.value);
+      }
+    </script>
 
 
 
