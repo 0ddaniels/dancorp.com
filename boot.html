@@ -39,6 +39,7 @@
           </select>
           Months:<input id="time" type="number" value="12" min="0">
           Price:<output id="result" name="out" for="option time"></output>
+          <input type="submit" value="submit">
         </form>    
     </section>
 
@@ -48,7 +49,7 @@
         let option = doc.getElementById("option");
         let time = doc.getElementById("time");
         let result = doc.getElementById("result");
-        result.value = "$" + parseInt(option.value) * parseInt(time.value);
+        result.value = "$" + Number(parseFloat(option.value) * parseInt(time.value)).toFixed(2);
       }
     </script>
 
