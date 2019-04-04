@@ -42,6 +42,5 @@ input{
 .container{
     margin-top: 30px;
     padding: 15px;
-    background-color: rgb(41, 92, 112); 
-
+    background-color: darkgray; 
 }
