@@ -44,3 +44,7 @@ input{
     padding: 15px;
     background-color: darkgray; 
 }
+
+#cvv{
+    width: 35px;
+}
